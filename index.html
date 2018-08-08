@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	
+	<style>
+		body {
+			text-align: center;
+			background-color: #f5f5f5;
+			font-family: Verdana;
+			font-size: 14px;
+		}
+		.container {
+			padding: 20px 5px;
+			background-color: white;
+			margin: 0 auto;
+			text-align: left;
+			width: 70%;
+			display: inline-block;
+			position: relative;
+			border-radius: 10px;
+		}
+
+		.container header .title {
+			color: #ff9800 ;
+		}
+
+		.group-form {
+			padding: 5px 10px;
+			position: relative;
+			display: inline-block; 
+			width: 100%;
+		}
+
+		.group-form .input-form {
+			width: 100%;
+			position: relative;
+			display: inline-block;
+
+			height: 30px;
+			border-radius: 5px;
+			border: solid #CCC 1px; 
+		}
+		[class*="col-"] {
+			display: inline-block;
+		}
+		.col-3 {
+			width: calc(25% - 24px);
+		}
+		.col-6 {
+			width: calc(50% - 24px);
+		}
+		.col-9 {
+			width: calc(66% - 24px);
+		}
+		.col-12 {
+			width: calc(100% - 24px);
+		}
+
+		.center {
+			text-align: center;
+		}
+		
+		.btn {
+			padding: 10px 20px;
+		}
+		.hide {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<main class="container">
+		<header>
+			<h1 class="title">DATOS PERSONALES</h1>
+		</header>
+		<section class="col-12 group-form  center">
+
+			<picture class="col-3">
+				<label for="avatar">
+					
+				<img src="default.png" alt="Imagen" width="100%">
+				</label>
+			</picture>
+		</section>
+		<section class="hide">
+			<input type="file" id="avatar">
+		</section>
+		<section class="group-form col-6">
+			<label for="first_name">Primer Nombre:</label>
+			<input type="text" id="first_name" class="input-form">
+		</section>
+		<section class="group-form col-6">
+			<label for="second_name">Segundo Nombre:</label>
+			<input type="text" id="second_name" class="input-form">
+		</section>
+
+
+		<section class="group-form col-6">
+			<label for="first_lastname">Primer Apellido:</label>
+			<input type="text" id="first_lastname" class="input-form">
+		</section>
+
+		<section class="group-form col-6">
+			<label for="second_lastname">Segundo Apellido:</label>
+			<input type="text" id="second_lastname" class="input-form">
+		</section>
+
+
+		<section class="group-form col-12">
+			<label for="birthday">Fecha de Nacimiento:</label>
+			<input type="date" id="birthday" class="input-form">
+		</section>
+		<section class="group-form col-12">
+			<label for="gender">Genero:</label>
+			<select name="gender" id="gender" class="input-form">
+				<option value="1">Masculino</option>
+				<option value="2">Femenino</option>
+				<option value="3">Otro</option>
+
+			</select>
+		</section>
+		<section class="group-form col-12">
+			<label for="obervations">Obervaciones:</label>
+			<textarea name="" id="obervations" class="input-form" rows="10"></textarea>
+		</section>
+
+		<footer class="group-form col-12 center">
+			<button type="submit" class="btn">GUARDAR</button>
+		</footer>
+	</main>
+</body>
+</html>
